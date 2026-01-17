@@ -1,0 +1,112 @@
+---
+const pathname = Astro.url.pathname;
+---
+
+<nav class="navbar">
+  <div class="container">
+    <a href="/" class="logo">SpeechWave</a>
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-menu">
+      <li><a href="/" class={pathname === "/" ? "active" : ""}>Home</a></li>
+      <li>
+        <a href="/features" class={pathname === "/features" ? "active" : ""}>
+          Features</a>
+      </li>
+      <li>
+        <a href="/downloads" class={pathname === "/downloads" ? "active" : ""}
+          >Downloads</a>
+      </li>
+      <li>
+        <a href="/pricing" class={pathname === "/pricing" ? "active" : ""}
+          >Pricing</a>
+      </li>
+      <li>
+        <a href="/contact" class={pathname === "/contact" ? "active" : ""}
+          >Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  /* Navigation */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    padding: var(--spacing-md) 0;
+  }
+
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: var(--font-size-xl);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-lg);
+    align-items: center;
+  }
+
+  .nav-menu a {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--secondary-text);
+    position: relative;
+  }
+
+  .nav-menu a:hover,
+  .nav-menu a.active {
+    color: var(--primary-text);
+  }
+
+  .nav-menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-text);
+    transition: width 0.3s ease;
+  }
+
+  .nav-menu a:hover::after,
+  .nav-menu a.active::after {
+    width: 100%;
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .mobile-menu-toggle span {
+    width: 25px;
+    height: 2px;
+    background-color: var(--primary-text);
+    transition: var(--transition);
+  }
+</style>

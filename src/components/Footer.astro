@@ -1,0 +1,90 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/downloads">Downloads</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">API Reference</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 SpeechWave. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* Footer */
+  .footer {
+    background-color: var(--primary-bg);
+    border-top: 1px solid var(--border-color);
+    padding: var(--spacing-2xl) 0 var(--spacing-lg);
+    margin-top: var(--spacing-3xl);
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .footer-section h4 {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .footer-section ul {
+    list-style: none;
+  }
+
+  .footer-section ul li {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .footer-section a {
+    color: var(--accent-text);
+    font-size: var(--font-size-sm);
+  }
+
+  .footer-section a:hover {
+    color: var(--primary-text);
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+    color: var(--accent-text);
+    font-size: var(--font-size-sm);
+  }
+</style>

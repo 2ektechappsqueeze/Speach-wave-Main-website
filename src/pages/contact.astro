@@ -1,0 +1,227 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import CTA from "../components/CTA.astro";
+---
+
+<Layout title="Contact Us">
+  <Hero style="min-height: 50vh;">
+    <div class="hero-content fade-in-up">
+      <h1>Get in Touch</h1>
+      <p>
+        Have questions? We'd love to hear from you. Send us a message and we'll
+        respond as soon as possible.
+      </p>
+    </div>
+  </Hero>
+  <!-- Contact Form Section -->
+  <section class="section">
+    <div class="container">
+      <span id="status"></span>
+      <form class="contact-form" id="contactForm"  >
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Your full name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="your.email@example.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            placeholder="How can we help?"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            placeholder="Tell us more about your inquiry..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;"
+          >Send Message</button
+        >
+
+        <div
+          id="formResponse"
+          style="margin-top: 1rem; text-align: center; display: none;"
+        >
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- Contact Info -->
+  <section class="section" style="background-color: #fafafa;">
+    <div class="container">
+      <h2 class="section-title">Other Ways to Reach Us</h2>
+
+      <div class="cards-grid">
+        <div class="card" style="text-align: center;">
+          <h3>📧 Email Support</h3>
+          <p>For general inquiries and support</p>
+          <p
+            style="font-weight: 600; color: var(--primary-text); margin-top: 1rem;"
+          >
+            support@speechwave.com
+          </p>
+          <p
+            style="font-size: 0.875rem; color: var(--accent-text); margin-top: 0.5rem;"
+          >
+            Response time: Within 24 hours
+          </p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <h3>💼 Sales Inquiries</h3>
+          <p>For enterprise and custom solutions</p>
+          <p
+            style="font-weight: 600; color: var(--primary-text); margin-top: 1rem;"
+          >
+            sales@speechwave.com
+          </p>
+          <p
+            style="font-size: 0.875rem; color: var(--accent-text); margin-top: 0.5rem;"
+          >
+            Response time: Within 12 hours
+          </p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <h3>🌐 Social Media</h3>
+          <p>Follow us for updates and news</p>
+          <div
+            style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center;"
+          >
+            <a href="#" style="font-size: 1.5rem;">𝕏</a>
+            <a href="#" style="font-size: 1.5rem;">in</a>
+            <a href="#" style="font-size: 1.5rem;">f</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Office Info -->
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+        <h2 class="section-title">Our Office</h2>
+        <p
+          style="color: var(--secondary-text); font-size: 1.125rem; line-height: 1.8;"
+        >
+          SpeechWave Technologies Inc.<br />
+          123 Innovation Drive<br />
+          San Francisco, CA 94107<br />
+          United States
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" style="background-color: #fafafa;">
+    <div class="container">
+      <h2 class="section-title">Quick Answers</h2>
+      <p class="section-subtitle">Common questions we receive</p>
+
+      <div class="cards-grid">
+        <div class="card">
+          <h3>What's your response time?</h3>
+          <p>
+            Support inquiries are typically answered within 24 hours. Sales
+            inquiries within 12 hours on business days.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Do you offer phone support?</h3>
+          <p>
+            Phone support is available for Enterprise customers. Pro users can
+            access priority email support.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Can I schedule a demo?</h3>
+          <p>
+            Yes! Enterprise customers can schedule a personalized demo. Contact
+            our sales team to arrange one.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Where can I find documentation?</h3>
+          <p>
+            Our comprehensive documentation and API reference are available in
+            the Resources section of our footer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <CTA />
+</Layout>
+<script type="module" is:inline src="/src/scripts/contact.js"></script>
+
+<style>
+  /* Contact Form */
+  .contact-form {
+    max-width: 600px;
+    margin: var(--spacing-xl) auto;
+  }
+
+  .form-group {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    transition: var(--transition);
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-text);
+  }
+
+  .form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+</style>

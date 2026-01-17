@@ -1,0 +1,44 @@
+ ---
+ const { style = "" } = Astro.props;
+ ---
+ <!-- Hero Section -->
+    <section class="hero" style={style}>
+        <div class="container">
+         <slot />
+    </section>
+
+<style is:global>
+    
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3xl) 0;
+  margin-top: 80px;
+}
+
+.hero-content {
+  max-width: 800px;
+  text-align: left;
+}
+
+.hero h1 {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.1;
+}
+
+.hero p {
+  font-size: var(--font-size-xl);
+  color: var(--accent-text);
+  margin-bottom: var(--spacing-xl);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+</style>    

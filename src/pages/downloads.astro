@@ -1,0 +1,88 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Platform from "../components/Platform.astro";
+import CTA from "../components/CTA.astro";
+---
+
+<Layout title="Downloads">
+  <Hero style="min-height: 60vh;">
+    <div class="hero-content fade-in-up">
+      <h1>Download SpeechWave</h1>
+      <p>Available on all your devices — iOS, Android, Windows, and macOS</p>
+    </div>
+  </Hero>
+
+  <Platform />
+ <!-- Installation Guide -->
+    <section class="section" style="background-color: #fafafa;">
+        <div class="container">
+            <h2 class="section-title">Quick Installation Guide</h2>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>1. Download</h3>
+                    <p>Click the download button for your platform above. The installer will begin downloading
+                        automatically.</p>
+                </div>
+
+                <div class="card">
+                    <h3>2. Install</h3>
+                    <p>Open the downloaded file and follow the installation wizard. Grant necessary permissions when
+                        prompted.</p>
+                </div>
+
+                <div class="card">
+                    <h3>3. Sign In</h3>
+                    <p>Launch SpeechWave and sign in with your account. New users can create a free account in seconds.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>4. Start Creating</h3>
+                    <p>You're ready to go! Start converting text to expressive AI voices immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- Features Overview -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">What's Included</h2>
+            <p class="section-subtitle">Every download includes full access to SpeechWave's core features</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>✓ Expressive AI Voices</h3>
+                    <p>Generate natural, human-like voices with emotion and expression</p>
+                </div>
+
+                <div class="card">
+                    <h3>✓ Multiple Voice Options</h3>
+                    <p>Access a diverse library of voices in different languages and accents</p>
+                </div>
+
+                <div class="card">
+                    <h3>✓ High-Quality Export</h3>
+                    <p>Export studio-quality audio in various formats</p>
+                </div>
+
+                <div class="card">
+                    <h3>✓ Cloud Sync</h3>
+                    <p>Sync your projects across all devices seamlessly</p>
+                </div>
+
+                <div class="card">
+                    <h3>✓ Regular Updates</h3>
+                    <p>Automatic updates with new features and improvements</p>
+                </div>
+
+                <div class="card">
+                    <h3>✓ Free Tier Available</h3>
+                    <p>Start with our free plan and upgrade when you need more</p>
+                </div>
+            </div>
+        </div>
+    </section>
+  <CTA />
+</Layout>

@@ -1,0 +1,198 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import CTA from "../components/CTA.astro";
+---
+
+<Layout title="Downloads">
+  <Hero style="min-height: 60vh;">
+    <div class="hero-content fade-in-up">
+      <h1>Simple, Transparent Pricing</h1>
+      <p>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
+    </div>
+  </Hero>
+   <section class="section">
+        <div class="container">
+            <div class="pricing-grid">
+                <!-- Free Plan -->
+                <div class="pricing-card">
+                    <h3>Free</h3>
+                    <div class="pricing-price">$0<span class="pricing-period">/month</span></div>
+                    <p style="color: var(--accent-text); margin-bottom: 2rem;">Perfect for trying out SpeechWave</p>
+
+                    <ul class="pricing-features">
+                        <li>10,000 characters/month</li>
+                        <li>5 voice options</li>
+                        <li>Standard quality audio</li>
+                        <li>Personal use only</li>
+                        <li>Email support</li>
+                    </ul>
+
+                    <a href="downloads.html" class="btn btn-secondary" style="width: 100%;">Get Started</a>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="pricing-card featured">
+                    <span class="pricing-badge">Most Popular</span>
+                    <h3>Pro</h3>
+                    <div class="pricing-price">$29<span class="pricing-period">/month</span></div>
+                    <p style="color: var(--accent-text); margin-bottom: 2rem;">For professionals and content creators
+                    </p>
+
+                    <ul class="pricing-features">
+                        <li>500,000 characters/month</li>
+                        <li>50+ voice options</li>
+                        <li>Studio-quality audio</li>
+                        <li>Commercial use included</li>
+                        <li>Voice customization</li>
+                        <li>API access</li>
+                        <li>Cloud storage (10GB)</li>
+                        <li>Priority support</li>
+                    </ul>
+
+                    <a href="downloads.html" class="btn btn-primary" style="width: 100%;">Start Free Trial</a>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="pricing-price">Custom</div>
+                    <p style="color: var(--accent-text); margin-bottom: 2rem;">For agencies and large teams</p>
+
+                    <ul class="pricing-features">
+                        <li>Unlimited characters</li>
+                        <li>All voices included</li>
+                        <li>Ultra-quality audio</li>
+                        <li>Commercial license</li>
+                        <li>Advanced customization</li>
+                        <li>Dedicated API</li>
+                        <li>Unlimited cloud storage</li>
+                        <li>Team collaboration</li>
+                        <li>Custom voice creation</li>
+                        <li>SLA guarantee</li>
+                        <li>Dedicated support</li>
+                    </ul>
+
+                    <a href="contact.html" class="btn btn-secondary" style="width: 100%;">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+      <!-- FAQ -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Can I change plans later?</h3>
+                    <p>Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Is there a free trial?</h3>
+                    <p>Yes, Pro plan comes with a 14-day free trial. No credit card required to start.</p>
+                </div>
+
+                <div class="card">
+                    <h3>What happens if I exceed my limit?</h3>
+                    <p>You'll be notified when reaching your limit. You can upgrade your plan or purchase additional
+                        characters.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Do you offer annual billing?</h3>
+                    <p>Yes! Annual billing is available with a 20% discount. Contact us for details.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Can I use generated voices commercially?</h3>
+                    <p>Commercial use is included in Pro and Enterprise plans. Free plan is for personal use only.</p>
+                </div>
+
+                <div class="card">
+                    <h3>What payment methods do you accept?</h3>
+                    <p>We accept all major credit cards, PayPal, and wire transfers for Enterprise customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <CTA />
+</Layout>
+
+<style>
+    .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  max-width: 1000px;
+  margin: var(--spacing-xl) auto;
+}
+
+.pricing-card {
+  padding: var(--spacing-xl);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.pricing-card.featured {
+  border-color: var(--primary-text);
+  position: relative;
+  transform: scale(1.05);
+}
+
+.pricing-card:hover {
+  box-shadow: 0 15px 50px var(--card-shadow);
+  transform: translateY(-5px);
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.pricing-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: var(--primary-text);
+  color: var(--primary-bg);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  border-radius: 20px;
+  margin-bottom: var(--spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pricing-price {
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  margin: var(--spacing-md) 0;
+}
+
+.pricing-period {
+  font-size: var(--font-size-sm);
+  color: var(--accent-text);
+}
+
+.pricing-features {
+  list-style: none;
+  margin: var(--spacing-lg) 0;
+  text-align: left;
+}
+
+.pricing-features li {
+  padding: var(--spacing-xs) 0;
+  font-size: var(--font-size-sm);
+  color: var(--secondary-text);
+}
+
+.pricing-features li::before {
+  content: '✓';
+  color: var(--primary-text);
+  font-weight: 700;
+  margin-right: var(--spacing-xs);
+}
+</style>
